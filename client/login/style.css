@@ -1,0 +1,42 @@
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+main{
+    background-color: #f0f2f5;
+    padding: 92px 0px 132px;
+}
+
+.content{
+    width: 980px;
+    margin: 0 auto;
+}
+.seccion1{
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box;
+    width: 400px;
+    height: 496px;
+    padding-right: 1px;
+    margin-right: 165px;
+}
+.seccion2{
+    display: inline-block;
+    box-sizing: border-box;
+    width: 396px;
+    height: 496px;
+    vertical-align: middle;
+    background-color: white;
+}
+
+.login-box{
+    /* display: block; */
+    border-style: solid;
+    border-width: 1px;
+}
+.login-box input, a{
+    display: block;
+}
