@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@700&display=swap');
 html{
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -10,33 +12,121 @@ main{
     padding: 92px 0px 132px;
 }
 
+h1{
+    font-family: 'Titillium Web', sans-serif;
+    color: #1876f2;
+    font-size: 59px;
+    letter-spacing: 0.1px;
+    margin-bottom: 1px;
+}
 .content{
     width: 980px;
     margin: 0 auto;
+    padding-top: 3.5px;
 }
 .seccion1{
     display: inline-block;
     vertical-align: middle;
     box-sizing: border-box;
-    width: 400px;
+    width: 520px;
     height: 496px;
     padding-right: 1px;
-    margin-right: 165px;
+    margin-right: 46px;
 }
+.logo-box{
+    margin: 90px 0;
+}
+.logo-box p{
+    font-size: 28px;
+    margin: 0;
+}
+
 .seccion2{
     display: inline-block;
     box-sizing: border-box;
     width: 396px;
     height: 496px;
     vertical-align: middle;
-    background-color: white;
+    padding-top: 35px;
+}
+.seccion2 p{
+    font-size: 14px;
+    text-align: center;
+    margin-top: 30px;
 }
 
 .login-box{
-    /* display: block; */
-    border-style: solid;
-    border-width: 1px;
+    display: inline-block;
+    box-sizing: border-box;
+    box-shadow: -4px 10px 10px #dddfe2, 4px 0px 10px #dddfe2;
+    width: 396px;
+    height: 350px;
+    background-color: white;
+    border-radius: 2%;
+    padding: 15px;
 }
-.login-box input, a{
+.login-box input{
     display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 50px;
+    border: 1px solid #dddfe2;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    padding-left: 14px;
+}
+::placeholder{
+    color:#a09f9f;
+    font-size: 16px;
+    font-weight: 500;
+
+}
+.login-button{
+    display: block;
+    width: 100%;
+    height: 45px;
+    background-color: #1876f2;
+    border: none;
+    border-radius: 7px;
+    margin-top: 20px;
+    font-size: 21px;
+    font-weight: 600;
+    color: white;
+}
+.signin-button{
+    display: block;
+    width: 188px;
+    height: 45px;
+    background-color: #42b72a;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 28px auto;
+}
+
+.login-box a{
+    display: block;
+    text-align: center;
+    margin: 20px 0;
+    font-size: 13.5px;
+    text-decoration: none;
+    font-weight: lighter;
+}
+
+.login-box hr{
+    height: 1px;
+    background: #dddfe2;
+    border: none;
+}
+
+@font-face {
+    font-family: 'klavikabold';
+    src: url('fonts/klavikabold.eot');
+    src: url('fonts/klavikabold.eot') format('embedded-opentype'),
+         url('fonts/klavikabold.woff2') format('woff2'),
+         url('fonts/klavikabold.woff') format('woff'),
+         url('fonts/klavikabold.ttf') format('truetype'),
+         url('fonts/klavikabold.svg#klavikabold') format('svg');
 }
