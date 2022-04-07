@@ -69,11 +69,16 @@ h1{
     display: block;
     box-sizing: border-box;
     width: 100%;
-    height: 50px;
+    height: 52px;
     border: 1px solid #dddfe2;
     border-radius: 6px;
-    margin-bottom: 12px;
+    margin-bottom: 11px;
     padding-left: 14px;
+    caret-color: #1876f2;
+}
+.login-box input:focus{
+    border: 1px solid #1876f2;
+    outline: #e7f3ff solid 2px;
 }
 ::placeholder{
     color:#a09f9f;
@@ -81,29 +86,48 @@ h1{
     font-weight: 500;
 
 }
+.login-box input:focus::placeholder{
+    color:#bec3c9;
+    font-size: 16px;
+    font-weight: 500;
+}
 .login-button{
     display: block;
     width: 100%;
-    height: 45px;
+    height: 49px;
     background-color: #1876f2;
+    transition: background-color 0.19s;
     border: none;
     border-radius: 7px;
-    margin-top: 20px;
+    margin-top: 18px;
     font-size: 21px;
     font-weight: 600;
+    cursor: pointer;
     color: white;
+}
+
+.login-button:hover{
+    background-color: #166fe5;
+    transition: background-color 0.19s;
 }
 .signin-button{
     display: block;
     width: 188px;
-    height: 45px;
+    height: 47px;
     background-color: #42b72a;
+    transition: background-color 0.19s;
     color: white;
     border: none;
     border-radius: 7px;
     font-size: 16px;
     font-weight: 600;
+    cursor: pointer;
     margin: 28px auto;
+}
+
+.signin-button:hover{
+    background-color: #36a420;
+    transition: background-color 0.19s;
 }
 
 .login-box a{
@@ -113,6 +137,14 @@ h1{
     font-size: 13.5px;
     text-decoration: none;
     font-weight: lighter;
+    color:#1876f2;
+}
+.login-box a:hover{
+    text-decoration: underline;
+}
+
+.login-box a:visited{
+    color:#1876f2;
 }
 
 .login-box hr{
@@ -120,7 +152,79 @@ h1{
     background: #dddfe2;
     border: none;
 }
+.seccion2 a{
+    color: black;
+    text-decoration: none;
+}
+.seccion2 a:hover{
+    text-decoration: underline;
+}
 
+
+
+
+
+.foot-content{
+    width: 980px;
+    font-size: 12.5px;
+    margin: 0 auto;
+
+}
+.foot-content *{
+    color: #999698;
+    text-decoration: none;
+}
+
+.foot-content hr{
+    height: 1px;
+    background: #dddfe2;
+    border: none;
+    margin: 9px 0 11px 0;
+}
+
+.lang-list{
+    padding-top: 25px;
+}
+.lang-list *{
+    margin-right: 10px;
+}
+
+.lang-list a:hover{
+    text-decoration: underline;
+}
+
+.lang-list > p {
+    display: inline;
+    color: #737373;
+}
+
+.lang-selector{
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+    background-color: #f5f6f7;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #dddfe2;
+    border-radius: 3px;
+    transition: background-color 0.19s;
+}
+.lang-selector:hover{
+    cursor: pointer;
+    background-color: #ebedf0;
+    transition: background-color 0.19s;
+}
+
+.footer-menu *{
+    margin-right: 10px;
+}
+.footer-menu a:hover{
+    text-decoration: underline;
+}
+
+.ID{
+    color: #737373;
+}
 @font-face {
     font-family: 'klavikabold';
     src: url('fonts/klavikabold.eot');
