@@ -234,12 +234,3 @@ h1{
          url('fonts/klavikabold.ttf') format('truetype'),
          url('fonts/klavikabold.svg#klavikabold') format('svg');
 }
-
-@keyframes loginAnimation{
-    0% {
-        background-color: #1876f2;
-    }
-    100%{
-        background-color: #166fe5;
-    }
-}
