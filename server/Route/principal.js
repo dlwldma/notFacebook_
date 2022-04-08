@@ -2,6 +2,7 @@ const express = require('express');
 const Route = express.Router();
 const path = require('path')
 
+/* const passport = require('../Controlls/passportControlls.js') */
 
 //GETTING LOGIN PAGE
 Route.get('/', (req, res)=>{
