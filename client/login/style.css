@@ -225,6 +225,33 @@ h1{
 .ID{
     color: #737373;
 }
+
+
+.signin-content{
+    box-sizing: border-box;
+    width: 432px;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+.sex-selector{
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+.short-input{
+    display: inline-block;
+    box-sizing: border-box;
+    width: 194px;
+}
+.large-input{
+    display: inline-block;
+    box-sizing: border-box;
+    width: 399px;
+}
+.signin-form > input{
+    margin-right: 7px;
+}
 @font-face {
     font-family: 'klavikabold';
     src: url('fonts/klavikabold.eot');

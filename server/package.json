@@ -1,12 +1,12 @@
 {
   "dependencies": {
     "express": "^4.17.3",
+    "mongoose": "^6.2.10",
     "nodemon": "^2.0.15"
   },
   "name": "server",
   "version": "1.0.0",
   "main": "app.js",
-  "devDependencies": {},
   "scripts": {
     "start": "nodemon app.js"
   },
