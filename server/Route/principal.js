@@ -11,6 +11,9 @@ Route.get('/', (req, res)=>{
 Route.get('/login/style.css', (req, res)=>{
     res.sendFile(path.resolve(__dirname, '../../client/login/style.css'))
 })
+Route.get('/login/controlls.js', (req, res)=>{
+    res.sendFile(path.resolve(__dirname, '../../client/login/controlls.js'))
+})
 
 
 

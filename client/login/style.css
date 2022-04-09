@@ -10,6 +10,13 @@ body{
 main{
     background-color: #f0f2f5;
     padding: 92px 0px 132px;
+    /* z-index: 0; */
+    opacity: 1;
+    transition: opacity 0.2s;
+}
+footer{
+    opacity: 1;
+    transition: opacity 0.2s;
 }
 
 h1{
@@ -226,12 +233,48 @@ h1{
     color: #737373;
 }
 
-
 .signin-content{
+    visibility: hidden;
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
     box-sizing: border-box;
     width: 432px;
-    margin: 0 auto;
+    border-radius: 7px;
     border: 1px solid black;
+    background-color: white;
+    opacity: 0;
+    transition: visibility 0.3s, opacity 0.2s;
+}
+
+.visible{
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s, opacity 0.2s;
+    z-index: 2;
+}
+.difuminado{
+    opacity: 0.2;
+    transition: opacity 0.2s;
+}
+
+.overlay{
+    position: fixed; /* Positioning and size */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.1);
+    z-index: 1;
+}
+
+
+.signin-content h2{
+    display: inline-block;
+}
+.close-signin-btn{
+    margin-left: 260px;
 }
 .sex-selector{
     display: inline-block;
@@ -251,13 +294,4 @@ h1{
 }
 .signin-form > input{
     margin-right: 7px;
-}
-@font-face {
-    font-family: 'klavikabold';
-    src: url('fonts/klavikabold.eot');
-    src: url('fonts/klavikabold.eot') format('embedded-opentype'),
-         url('fonts/klavikabold.woff2') format('woff2'),
-         url('fonts/klavikabold.woff') format('woff'),
-         url('fonts/klavikabold.ttf') format('truetype'),
-         url('fonts/klavikabold.svg#klavikabold') format('svg');
 }
