@@ -14,6 +14,9 @@ Route.get('/login/style.css', (req, res)=>{
 Route.get('/login/controlls.js', (req, res)=>{
     res.sendFile(path.resolve(__dirname, '../../client/login/controlls.js'))
 })
+Route.get('/login/X-symbol.svg', (req, res) => {
+    res.sendFile(path.resolve(__dirname, '../../client/login/X-symbol.svg'))
+})
 
 
 

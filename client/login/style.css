@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@700&display=swap');
+
 html{
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -12,7 +13,7 @@ main{
     padding: 92px 0px 132px;
     /* z-index: 0; */
     opacity: 1;
-    transition: opacity 0.2s;
+    /* transition: opacity 0.2s; */
 }
 footer{
     opacity: 1;
@@ -168,9 +169,6 @@ h1{
 }
 
 
-
-
-
 .foot-content{
     width: 980px;
     font-size: 12.5px;
@@ -233,6 +231,15 @@ h1{
     color: #737373;
 }
 
+
+
+
+
+
+
+
+
+
 .signin-content{
     visibility: hidden;
     position: absolute;
@@ -242,9 +249,9 @@ h1{
     box-sizing: border-box;
     width: 432px;
     border-radius: 7px;
-    border: 1px solid black;
     background-color: white;
     opacity: 0;
+    box-shadow: -1px 7px 9px #dddfe2, 1px 0 9px #dddfe2;
     transition: visibility 0.3s, opacity 0.2s;
 }
 
@@ -269,29 +276,169 @@ h1{
     z-index: 1;
 }
 
+.upper-signin{
+    padding: 10px 16px;
+}
 
-.signin-content h2{
+.signin-content hr{
+    height: 1px;
+    background: #dddfe2;
+    border: none;
+    margin: 0;
+}
+.lower-signin{
+    box-sizing: border-box;
+    padding: 16px;
+}
+.upper-signin h2{
     display: inline-block;
+    font-size: 32px;
+    margin: 0;
+    padding: 0;
+}
+.upper-signin p{
+    color: #737373;
+    font-size: 15px;
+    margin: 3px 0 0 0; 
 }
 .close-signin-btn{
-    margin-left: 260px;
+    margin-left: 210px;
 }
-.sex-selector{
-    display: inline-block;
-    border: 1px solid black;
-    border-radius: 3px;
+.close-signin-btn img{
+   width: 16px;
+   height: 25px 
+}
+.close-signin-btn:hover{
+    cursor:default;
+}
+.close-signin-btn img:hover{
+    cursor:default;
 }
 
 .short-input{
     display: inline-block;
     box-sizing: border-box;
+    background-color: #f5f6f7;
+    border: solid 1px #ccd0d5;
+    border-radius: 5px;
     width: 194px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    height: 40px;
+}
+.short-input::placeholder{
+    color: #8d949e;
+    font-size: 15px;
 }
 .large-input{
     display: inline-block;
     box-sizing: border-box;
+    background-color: #f5f6f7;
+    border: solid 1px #ccd0d5;
+    border-radius: 5px;
     width: 399px;
+    height: 40px;
+    margin-bottom: 10px;
+    padding-left: 10px;
 }
-.signin-form > input{
-    margin-right: 7px;
+.large-input::placeholder{
+    color: #8d949e;
+    font-size: 15px;
+}
+.first-input{
+    margin-right: 5.57px;
+}
+.text-input:focus{
+    outline: none;
+}
+.bday-header{
+    color: #606770;
+    font-size: 12px;
+    margin: 4px 0 3px 0;
+}
+.bday-selector{
+    box-sizing: border-box;
+    border: solid 1px #ccd0d5;
+    border-radius: 5px;
+    width: 121px;
+    height: 36px;
+    border-radius: 4px;
+}
+.bday-selector:focus{
+    outline: none;
+}
+.bday-1{
+    margin-right: 13px;
+}
+
+.bday-2{
+    margin-right: 13px;
+}
+
+.sex-header{
+    color: #606770;
+    font-size: 12px;
+    margin: 12px 0 3px 0;
+}
+.sex-selector{
+    display: inline-block;
+    box-sizing: border-box;
+    border: 1px solid black;
+    padding-top: 7px;
+    padding-left: 10px;
+    border-radius: 3px;
+}
+.sex-selector input{
+    margin-left: 21px;
+}
+.sselector-1{
+    width: 100px;
+    height: 36px;
+    margin-right: 7.05px;
+    border: solid 1px #ccd0d5;
+    border-radius: 5px;
+    color: #1c1e21;
+    font-size: 15.3px;
+    font-weight: lighter;
+}
+.sselector-2{
+    width: 116px;
+    height: 36px;
+    margin-right: 7.05px;
+    border: solid 1px #ccd0d5;
+    border-radius: 5px;
+    color: #1c1e21;
+    font-size: 15.3px;
+    font-weight: lighter;
+}
+.sselector-3{
+    width: 159px;
+    height: 36px;
+    border: solid 1px #ccd0d5;
+    border-radius: 5px;
+    color: #1c1e21;
+    font-size: 15.3px;
+    font-weight: lighter;
+}
+
+.warning{
+    color: #777777;
+    font-size: 11.5px;
+    margin: 15px 0;
+}
+.signin-submit{
+    display: block;
+    box-sizing: border-box;
+    background-color: #00a400;
+    font-size: 18px;
+    font-weight: bolder;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    width: 194px;
+    height: 36px;
+    margin: 0 auto 8px auto;
+}
+.signin-submit:hover{
+    cursor:pointer;
 }
