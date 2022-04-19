@@ -1,6 +1,6 @@
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
-const User = require('../schema/UserCredentials.js');
+const User = require('../Schema/UserCredentials.js');
 
 passport.serializeUser((user, done)=>{
     done(null, user._id);
@@ -17,7 +17,7 @@ passport.deserializeUser((id, done)=>{
 const loginCallback = (req, userName, userPass, done) => {
     const exists = async () => {
         await User.findOne({
-            username: userName
+            email: userName
         })
     }
     if(exists){
@@ -28,21 +28,15 @@ const loginCallback = (req, userName, userPass, done) => {
             console.log("Contraseña incorrecta");
             return done(null, false)
         }
-    }else{
-        console.log("Usuario no encontrado")
-        return done(null, false);
     }
-}
-/* const signinCallback = (req, userName, userPass, done) => {
-} */
-passport.use('Login-Method', new LocalStrategy({
-    usernameField: 'loginUserName',
-    passwordField: 'loginUsePass'
-}), loginCallback)
+    console.log("Usuario no encontrado")
+    return done(null, false);
 
-/* passport.use('Signin-Method', new LocalStrategy({
-    usernameField: 'signinUserName',
-    passwordField: 'signinUserPass'
-}), signinCallback) */
+}
+
+passport.use('Login-Method', new LocalStrategy({
+    usernameField: 'email',
+    passwordField: 'password'
+}, loginCallback))
 
 module.export = passport;

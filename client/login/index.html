@@ -19,8 +19,8 @@
             <div class="seccion2">
                 <div class="login-box">
                     <form action="/">
-                        <input type="text" placeholder="Correo electronico o número de teléfono">
-                        <input type="password" placeholder="Contraseña">
+                        <input type="text" placeholder="Correo electronico o número de teléfono" name="email">
+                        <input type="password" placeholder="Contraseña" name="password">
                         <button class="login-button"type="submit">Iniciar sesión</button>
                     </form>
                     <a href="#">¿Olvidaste tu contraseña?</a>
@@ -39,11 +39,15 @@
         </div>
         <hr>
         <div class="lower-signin">
-            <form class="signin-form"action="/">
-                <input class="short-input first-input text-input"type="text" placeholder="Nombre">
-                <input class="short-input text-input"type="text" placeholder="Apellido">
-                <input class="large-input text-input" type="text" placeholder="Número de celular o correo electrónico">
-                <input class="large-input text-input"type="password" placeholder="Contraseña nueva">
+            <form class="signin-form"action="/signin" method="post">
+                <input class="short-input first-input text-input"type="text" placeholder="Nombre" name="signinName">
+
+                <input class="short-input text-input"type="text" placeholder="Apellido" name="signinLastName">
+
+                <input class="large-input text-input" type="text" placeholder="Número de celular o correo electrónico" name="signinEmail">
+
+                <input class="large-input text-input"type="password" placeholder="Contraseña nueva" name="signinPass">
+
                 <p class="bday-header">Fecha de nacimiento</p>
                 <select class="bday-selector bday-1" name="day" id="day">
                     <option value="1">1</option>
@@ -226,7 +230,7 @@
                     <input type="radio" id="personalizado" value="personalizado" name="sexo">
                 </div>
                 <p class="warning">Recuerda que no somos facebook, asi que no uses tus credenciales reales pls.</p>
-                <button class="signin-submit">Registrarte</button>
+                <button type="submit" class="signin-submit">Registrarte</button>
             </form>
         </div>
     </div>
