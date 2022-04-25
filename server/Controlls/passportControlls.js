@@ -14,15 +14,14 @@ passport.deserializeUser((id, done)=>{
     return done(null, findUser);
 })
 
-const loginCallback = (req, userName, userPass, done) => {
-    const exists = async () => {
-        await User.findOne({
-            email: userName
-        })
-    }
+const loginCallback = async (req, userName, userPass, done) => {
+    const exists = await User.findOne({
+        email: userName
+    })
     if(exists){
+        console.log(exists.password)
         if(userPass == exists.password){
-            console.log("Usuario autentificado");
+            console.log("Credenciales acertadas")
             return done(null, exists);
         }else{
             console.log("Contraseña incorrecta");
@@ -36,7 +35,8 @@ const loginCallback = (req, userName, userPass, done) => {
 
 passport.use('Login-Method', new LocalStrategy({
     usernameField: 'email',
-    passwordField: 'password'
+    passwordField: 'password',
+    passReqToCallback: true
 }, loginCallback))
 
 module.export = passport;

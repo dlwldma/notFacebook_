@@ -9,10 +9,23 @@ require('../Controlls/passportControlls.js')
 
 Route.use(bodyparser.json());
 Route.use(bodyparser.urlencoded({extended: true}));
+Route.use(session({
+    secret: "hooola amigos k tal chavales JOJOJO",
+    path: '/',
+    resave: false,
+    saveUninitialized: false
+}))
 Route.use(passport.initialize());
+Route.use(passport.session());
 
 //GETTING LOGIN PAGE
-Route.get('/', (req, res)=>{
+Route.get('/', (req, res, next)=>{
+    if(req.isAuthenticated()){
+        res.redirect('/home')
+    }else{
+        return next();
+    }
+},(req, res)=>{
     res.sendFile(path.resolve(__dirname,'../../client/login/index.html'))
 })
 Route.get('/login/style.css', (req, res)=>{
@@ -25,6 +38,27 @@ Route.get('/login/X-symbol.svg', (req, res) => {
     res.sendFile(path.resolve(__dirname, '../../client/login/X-symbol.svg'))
 })
 
+
+//USER LOGIN 
+Route.post('/login', passport.authenticate('Login-Method', {
+    successRedirect: '/home',
+    failureRedirect: '/',
+    passReqToCallback: true
+})); 
+
+//GETTING HOME PAGE
+Route.get('/home', (req, res, next)=>{
+    if(req.isAuthenticated()){
+        console.log("Usuario esta autentificado")
+        return next();
+    }else{
+        console.log("Usuario no esta autentificado")
+        res.redirect('/')
+    }
+}, (req, res)=>{
+    res.sendFile(path.resolve(__dirname,'../../client/homepage/index.html' ))
+})
+
 //USER SIGNIN
 const signinApi = require('../Controlls/signinApi.js')
 Route.post('/signin', (req, res)=>{
@@ -34,6 +68,12 @@ Route.post('/signin', (req, res)=>{
     const email = req.body.signinEmail; 
     signinApi(name, lastName, password, email, res);
 });
+
+//USER LOGOUT 
+Route.post('/logout', (req, res)=>{
+    req.logout();
+    res.redirect('/')
+})
 
 
 
