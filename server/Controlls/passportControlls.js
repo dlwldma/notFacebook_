@@ -19,7 +19,6 @@ const loginCallback = async (req, userName, userPass, done) => {
         email: userName
     })
     if(exists){
-        console.log(exists.password)
         if(userPass == exists.password){
             console.log("Credenciales acertadas")
             return done(null, exists);

@@ -58,6 +58,12 @@ Route.get('/home', (req, res, next)=>{
 }, (req, res)=>{
     res.sendFile(path.resolve(__dirname,'../../client/homepage/index.html' ))
 })
+Route.get('/home/style.css', (req, res)=> {
+    res.sendFile(path.resolve(__dirname, '../../client/homepage/style.css'))
+})
+Route.get('/public/facebook-logo.svg', (req, res)=>{
+    res.sendFile(path.resolve(__dirname, '../../client/public/facebook-logo.svg')
+)})
 
 //USER SIGNIN
 const signinApi = require('../Controlls/signinApi.js')
@@ -79,3 +85,4 @@ Route.post('/logout', (req, res)=>{
 
 
 module.exports = Route;
+
