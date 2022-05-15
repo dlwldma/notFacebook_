@@ -10,9 +10,9 @@ h1{
     left: 0;
     box-sizing: border-box;
     width: 100vw;
-    height: 60px;
+    height: 56px;
     background-color: white;
-   /*  border: 1px black solid; */
+    /* border: 1px black solid; */
 }
 
 .logo-img{
@@ -42,17 +42,24 @@ h1{
     padding-left: 20px;
 }
 
+
+
+
+
+
+/* TODA LA PARTE DEL MEDIO */
 .home-div{
     position: absolute;
     top: 7.9px;
     left: 50%;
-    transform: translate(-50%, 0);
-   /*  border: 1px black solid; */
+    transform: translate(-52%, 0);
+    /* border: 1px black solid; */
 }
 .home-options{
     display: inline-block;
+    box-sizing: border-box;
     text-align: center;
-    vertical-align: super;
+    vertical-align:super;
     width: 126px;
     height: 39px;
     text-decoration: none;
@@ -60,14 +67,97 @@ h1{
     padding-top: 6px;
 }
 .HO1{
+    box-sizing: border-box;
+    height: 48px;
     color: #1b75e4;
     border-bottom: 3px #1b75e4 solid;
-    margin-right: 28px;
 }
-.HO3, .HO2{
-    color: grey;
+.HO2{
+    box-sizing: border-box;
+    border-radius: 8px;
+    height: 44px;
+    margin: 0px 8px 0 7px;
+    color: #65676b;
+
+}
+.HO2:hover{
+    background-color: #f2f2f2;
+}
+.HO3{
+    box-sizing: border-box;
+    border-radius: 8px;
+    height: 44px;
+    color: #65676b;
+}
+.HO3:hover{
+    background-color: #f2f2f2;
 }
 
+
+
+
+
+/* LOS BOTONSITOS DE LA IZQUIERDA ARRIBA */
+.profile-top-button{
+    position: absolute;
+    box-sizing: border-box;
+    right: 225px;
+    top: 9px;
+    text-decoration: none;
+    padding: 4px 10px 4px 3px;
+    border-radius: 50px;
+
+   /*  border: 1px solid black; */
+}
+.profile-top-button span{
+    align-items: center;
+    color: black;
+}
+.profile-image{
+    vertical-align:-8px;
+    height: 29px;
+    width: 29px;
+    margin-right: 5px;
+}
+.profile-top-button:hover{
+    background-color: #f2f2f2;
+}
+
+
+.profile-div{
+    position: absolute; 
+    top: 8px;
+    right: 33px;
+}
+.left-top-button{
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    height: 30px;
+    width: 40px;
+    margin-left: 4px;
+    text-decoration: none;
+    padding-top: 10px;
+    border-radius: 50%;
+    color: black;
+    background-color: #e4e6eb;
+}
+.left-top-button:hover{
+    background-color: #d8dadf;
+}
+.ltb1{
+    height: 20px;
+    width: 20px;
+}
+.ltb4{
+    height: 20px;
+    width: 20px;
+}
+
+
+
+
+/* EL MENU DE LA IZQUIERDA ABAJO */
 .left-menu{
     position: fixed;
     top: 60px;

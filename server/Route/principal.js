@@ -64,6 +64,9 @@ Route.get('/home/style.css', (req, res)=> {
 Route.get('/public/facebook-logo.svg', (req, res)=>{
     res.sendFile(path.resolve(__dirname, '../../client/public/facebook-logo.svg')
 )})
+Route.get('/public/profile-image.png', (req, res)=>{
+    res.sendFile(path.resolve(__dirname, '../../client/public/profile-image.png'))
+})
 
 //USER SIGNIN
 const signinApi = require('../Controlls/signinApi.js')
