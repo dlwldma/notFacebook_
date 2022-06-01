@@ -65,7 +65,25 @@ Route.get('/public/facebook-logo.svg', (req, res)=>{
     res.sendFile(path.resolve(__dirname, '../../client/public/facebook-logo.svg')
 )})
 Route.get('/public/profile-image.png', (req, res)=>{
-    res.sendFile(path.resolve(__dirname, '../../client/public/profile-image.png'))
+    res.sendFile(path.resolve(__dirname, '../../client/public/profile-image1.png'))
+})
+Route.get('/public/profile-image2.png', (req, res)=>{
+    res.sendFile(path.resolve(__dirname, '../../client/public/profile-image2.png'))
+})
+Route.get('/public/story2.png', (req, res)=>{
+    res.sendFile(path.resolve(__dirname, '../../client/public/story2.png'))
+})
+Route.get('/public/story3.jpg', (req, res)=>{
+    res.sendFile(path.resolve(__dirname, '../../client/public/story3.jpg'))
+})
+Route.get('/public/story4.png', (req, res)=>{
+    res.sendFile(path.resolve(__dirname, '../../client/public/story4.png'))
+})
+Route.get('/public/story5.png', (req, res)=>{
+    res.sendFile(path.resolve(__dirname, '../../client/public/story5.png'))
+})
+Route.get('/public/media-post-content.png', (req, res)=>{
+    res.sendFile(path.resolve(__dirname, '../../client/public/media-post-content.png'))
 })
 
 //USER SIGNIN
